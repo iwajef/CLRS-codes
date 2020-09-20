@@ -20,7 +20,7 @@ int main()
 	
 	InsertionSort(arr, 10);  // use the insertion sort
 	
-	printf("The sorted array: \n");
+	printf("The array after sorted: \n");
 	PrintArray(arr, 10);
 	
 	return 0;
