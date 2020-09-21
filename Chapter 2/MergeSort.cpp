@@ -5,8 +5,9 @@
  * 
  */
 
-#include <stdio.h>
-#include <limits.h>
+#include <cstdio>
+#include <cstdlib>
+#include <climits>
 
 void MergeSort(int* arr, int left, int right);
 void Merge(int* arr, int left, int mid, int right);
@@ -50,7 +51,9 @@ void Merge(int* arr, int left, int mid, int right)
 	
 	// L.size: arr[left ... mid] + 1(infinite)
 	// R.size: arr[mid+1 ... right] + 1(infinite) 
-	int L[n1 + 1], R[n2 + 1];
+	// DO NOT initialise like this in C: int L[n1 + 1], R[n2 + 1];
+	int* L = (int*)malloc(sizeof(int) * (n1 + 1));
+	int* R = (int*)malloc(sizeof(int) * (n2 + 1));
 	for (int i = 0; i < n1; i++)
 		L[i] = arr[left + i];
 	for (int i = 0; i < n2; i++)

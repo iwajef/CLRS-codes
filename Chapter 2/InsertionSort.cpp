@@ -5,7 +5,7 @@
  * 
  */
 
-#include <stdio.h>
+#include <cstdio>
 
 void InsertionSort(int* arr, int n);
 void PrintArray(int* arr, int n);
