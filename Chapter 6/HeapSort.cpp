@@ -40,10 +40,6 @@ void HeapSort(int* arr, int length)
         arr[0]--;  // heap size -1
         MaxHeapify(arr, 1);
     }
-    // The time complexity for BuildMaxHeap() is O(n)
-    //                         MaxHeapify()      O(logn)
-    // Time complexity: O(nlogn)
-    // Space complexity: O(1)
 }
 
 
